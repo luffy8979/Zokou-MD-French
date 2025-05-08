@@ -1,0 +1,18 @@
+nom : Docker Image CI
+
+sur :
+  pousser :
+    branches : [ "principale" ]
+  pull_request :
+    branches : [ "principale" ]
+
+emplois :
+
+  construire :
+
+    fonctionne sur : ubuntu-latest
+
+    étapes :
+    - utilise : actions/checkout@v4
+    - nom : Construire l'image Docker
+      exécuter : docker build . --file Dockerfile --tag mon-nom-d'image:$(date +%s)
