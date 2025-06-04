@@ -47,8 +47,8 @@ npm start
 ### 🔑 Accès Rapide
 | Service | Lien | Statut |
 |---------|------|--------|
-| **Session Scan** | [zokouscan-din3.onrender.com/](https://zokouscan-din3.onrender.com/) | ![Online](https://img.shields.io/badge/Status-Online-green) |
-| **Session Scan 2** | [zokou-scan..onrender.com](https://zokou-scan.onrender.com/) | ![Online](https://img.shields.io/badge/Status-Online-green) |
+| **Session 1** | [zokouscan-din3.onrender.com/](https://zokouscan-din3.onrender.com/) | ![Online](https://img.shields.io/badge/Status-Online-green) |
+| **Session 2** | [zokou-scan..onrender.com](https://zokou-scan.onrender.com/) | ![Online](https://img.shields.io/badge/Status-Online-green) |
 | **Backup Server** | [zokou-web.onrender.com](https://zokou-web.onrender.com/) | ![Online](https://img.shields.io/badge/Status-Online-green) |
 
 ### ⚙️ Configuration Minimaliste
