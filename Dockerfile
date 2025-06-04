@@ -1,32 +1,21 @@
-# Utilisation de l'image Node.js basée sur Debian Buster
-FROM node:lts-buster
+FROM node:20-slim
 
-# Mise à jour et installation des paquets requis
 RUN apt-get update && \
   apt-get install -y \
-  ffmpeg \ 
-  imagemagick \ 
-  webp && \
+  ffmpeg \
+  imagemagick \
+  webp \
+  git && \
   apt-get upgrade -y && \
   rm -rf /var/lib/apt/lists/*
 
-# Clonage du dépôt GitHub
-RUN git clone https://github.com/luffy8979/Zokou-MD-French /root/my_app
+WORKDIR /root/zokou
 
-# Définition du répertoire de travail
-WORKDIR /root/my_app/
-
-# Copie du fichier package.json pour installer les dépendances
 COPY package.json .
-RUN npm install pm2 -g && \
-  npm install
+RUN npm install
 
-# Copie des fichiers de l'application dans l'image Docker
 COPY . .
 
-# Ouverture du port 8000
 EXPOSE 8000
 
-# Commande pour démarrer l'application
-CMD ["npm", "run", "web"]
-
+CMD ["npm","start"]
